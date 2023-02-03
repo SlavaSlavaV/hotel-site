@@ -28,7 +28,7 @@ $(document).ready(function () {
 	// Top Slider
 
 	$('#top-slider').slick({
-		// autoplay: true,
+		autoplay: true,
 		autoplaySpeed: 5000,
 		speed: 1000,
 		prevArrow: '<span class="prev"></span>',
