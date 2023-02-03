@@ -1,0 +1,130 @@
+// Section resort
+
+.s-resort 
+	position: relative
+	min-height: 89.6rem
+	padding-top: 8rem
+	padding-bottom: 6rem
+	background-color: #222222 
+	background-size: cover
+	+sm(padding-top, 4rem)
+	+sm(padding-bottom, 2rem)
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(#0c0c0c, 0.7)
+		z-index: 0
+
+.gallery
+	+u-row-flex(2.2rem)
+	position: relative 
+	justify-content: center
+	margin-top: 3rem
+	&__item
+		+u-col(2rem)
+		+u-size(4, 12, 2rem)
+		+size-md(6)
+		+size-sm(12)
+		margin-bottom: 2rem
+		text-align: center
+		overflow: hidden
+	&__link
+		position: relative
+		display: block
+		backface-visibility: hidden
+		+trs(0.6s)
+		&:hover,
+		&:focus
+			transform: scale(1.2)
+			+md(transform, scale(1))
+		&::before 
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(255, 180, 5, 0.3)
+			opacity: 0
+			+trs(0.6s)
+		&::after 
+			content: "\f00e"
+			position: absolute
+			top: 50%
+			left: 50%
+			font: 
+				family: "Font Awesome 5 Free"
+				weight: 900
+				size: 2.5em
+			color: rgba(255, 255, 255, 0.8)
+			opacity: 0
+			+trf-t(-50%, -50%)
+			+trs(2s)
+		&:hover::before,
+		&:focus::before,
+		&:hover::after,
+		&:focus::after
+			opacity: 1
+			+md(opacity, 0)
+	&__img 
+		display: block
+
+/* magnific popap gallery customize */
+
+button.mfp-close 
+	font-size: 4rem
+
+/* animate gallery */
+
+.mfp-ready .mfp-figure
+	opacity: 0
+
+.mfp-zoom-in
+	.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+		opacity: 0
+		transition: all 0.4s ease-out
+	&.mfp-bg, .mfp-preloader
+		opacity: 0
+		transition: all 0.4s ease-out
+	&.mfp-image-loaded .mfp-figure
+		opacity: 1
+	&.mfp-ready
+		.mfp-iframe-holder .mfp-iframe-scaler
+			opacity: 1
+		&.mfp-bg, .mfp-preloader
+			opacity: 0.8
+	&.mfp-removing
+		.mfp-figure, .mfp-iframe-holder .mfp-iframe-scaler
+			opacity: 0
+		&.mfp-bg, .mfp-preloader
+			opacity: 0
+
+.mfp-iframe-scaler
+	overflow: visible
+
+.mfp-zoom-out-cur
+	cursor: auto
+	.mfp-image-holder .mfp-close
+		cursor: pointer
+
+/* magnific popap gallery preloader */
+
+.mfp-preloader
+	width: 30px !important
+	height: 30px !important
+	background-color: $accent !important
+	opacity: 0.65
+	margin: 0 auto
+	animation: rotateplane 1.2s infinite ease-in-out	
+
+@keyframes rotateplane
+	0%
+		transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+	50%
+		transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+	100%
+		transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)

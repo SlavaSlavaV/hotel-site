@@ -1,0 +1,127 @@
+// footer
+
+.footer-top 
+	min-height: 35rem
+	padding-top: 5.3rem
+	padding-bottom: 5.8rem
+	background-color: #29292a
+	+sm(padding, 4rem 0)
+
+.footer-content 
+	+row-flex()
+	&__item 
+		+col()
+		+size(3)
+		+size-md(4)
+		+size-sm(12)
+		+sm(margin-bottom, 3rem)
+		&:nth-child(3)
+			+size(2)
+			+size-md(4)
+			+size-sm(12)
+		&:nth-child(4)
+			+size(4)
+			+size-md(8)
+			+size-sm(12)
+			+md(margin-top, 3rem)
+			+sm(margin, 0 15px)
+	&__title-blog
+		margin-top: 3rem
+		margin-bottom: 1.6rem
+		font-weight: 600
+		line-height: 1.1
+		+xs(line-height, 1.4)
+		+xs(font-size, 1.6rem)
+	&__link-blog
+		color: #fff
+		&:hover, 
+		&:focus 
+			color: $accent
+	&__text-blog
+		font-size: 15px
+		line-height: 1.33
+		color: #727272
+
+.footer-contact
+	margin-top: 1.6rem 
+	margin-bottom: 1.7rem
+	font-family: $titleFont
+	font-size: 1.5rem
+	font-weight: 600
+	color: #727272
+	&__icon-loc
+		float: left 
+		font-size: 2rem
+		color: #9e9e9e
+		margin-right: 1.4rem
+		+sm(float, none)
+	&__icon-phone
+		@extend .footer-contact__icon-loc
+		margin-right: 5px
+	&__phone
+		+clearfix() 
+		margin-top: 7px
+		& > a
+			@extend .footer-contact
+			margin: 0
+			&:hover, 
+			&:focus 
+				color: $accent
+
+.footer-menu 
+	margin-top: 3rem
+	&__item 
+		margin-bottom: 1.2rem
+	&__link 
+		font: 
+			family: $titleFont
+			weight: 600
+			size: 1.6em
+		line-height: 1
+		text-transform: capitalize
+		color: #ffffff
+		&:hover,
+		&:focus 
+			color: $accent
+
+.active
+	& > .footer-menu__link
+		color: $accent
+
+.instagram 
+	+u-row-flex(1rem)
+	margin-top: 3rem
+	&__item 
+		+u-col(1rem)
+		+u-size(4, 12, 1rem)
+		+size-lg(6)
+		+size-md(4)
+		+size-xs(6)
+		margin-bottom: 1rem
+		overflow: hidden
+	&__link 
+		display: block
+		backface-visibility: hidden
+		&:hover,
+		&:focus 
+			+trf-s(1.1)
+	&__img 
+		display: block	
+
+.footer-bottom 
+	min-height: 6rem
+	background-color: #1f1f21
+
+.copy
+	padding: 1.7rem 0
+	font-family: $titleFont
+	font-size: 1.7em
+	font-weight: normal 
+	text-align: center
+	color: #727272
+	+xs(font-size, 1.5em)
+	&__link 
+		color: $accent
+		&:hover,
+		&:focus
+			color: #fff		

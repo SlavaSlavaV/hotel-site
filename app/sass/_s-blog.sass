@@ -1,0 +1,292 @@
+	/* Blog, Article */
+	
+.s-blog 
+	padding-top: 8rem
+	padding-bottom: 9rem
+	+sm(padding, 4rem 0)
+
+.column-wrapper 
+	+row-flex()
+
+.content-left
+	+col()
+	+size(8)
+	+size-md(12)
+
+.post 
+	margin-bottom: 4rem
+	border-bottom: 1px solid #e2e2e2
+	&:last-child 
+		border: none
+	&__title 
+		font: 
+			weight: 600
+			size: 2.8rem
+		line-height: 1.4
+		+sm(font-size, 2.2rem)
+		+xs(font-size, 2rem)
+	&__title-link 
+		color: $themeDark
+		&:hover, 
+		&:focus 
+			color: $accent
+	&__img-block
+		margin-top: 3rem
+		margin-bottom: 2.5rem
+	&__img-link
+		+trs(1s)
+		&:hover,
+		&:focus
+			filter: blur(3px) 
+	&__text
+		margin-bottom: 2.7rem
+		font-size: 1.8em
+		+xs(font-size, 1.6em)
+		+xs(margin-bottom, 1rem)
+	&__buttons 
+		display: flex
+		justify-content: space-between
+		margin-top: 2rem
+		margin-bottom: 5rem
+	&__social-list 
+		margin-top: 5rem
+		+xs(margin-top, 3rem)
+	&__section
+		margin-top: 7rem
+		+xs(margin-top, 5rem)
+	&__comment-list
+		margin-top: 3rem
+
+.inline-list 
+	margin-top: 1.6rem
+	font-size: 1.3em
+	line-height: 1
+	color: $themeGray 
+	+xs(line-height, 1.4)
+	&__item 
+		display: inline-block
+		margin-right: 14px
+	&__item-link
+		text-transform: uppercase
+		color: $accent
+		&:hover, 
+		&:focus 
+			color: darken($accent, 10%)
+
+// Sidebar 
+
+.sidebar 
+	+col()
+	+size(4)
+	+size-md(12)
+
+.search-form 
+	min-width: 100%
+	display: flex
+	flex-wrap: nowrap
+	&__input 
+		max-width: 32rem
+		width: 100%
+		padding: 0 10px
+		line-height: 40px
+		+md(max-width, 100%)
+	&__button 
+		width: 4.2rem
+		height: 4.2rem
+		margin-left: 5px
+		background-color: $accent 
+		border: none
+		text-align: center
+		+trs(0.3s)
+		&::before 
+			content: "\f002"
+			font-family: "Font Awesome 5 Free"
+			font-weight: 900
+			font-size: 1.4rem
+			color: #ffffff
+		&:hover,
+		&:focus 
+			background-color: lighten($accent, 20%)
+
+.widget 
+	margin-top: 5rem
+	padding-top: 5rem
+	border-top: 1px solid #E2E2E2
+	&__title 
+		margin-bottom: 3rem
+
+.recent-list
+	&__item 
+		margin-bottom: 1.6rem
+	&__link 
+		font-size: 1.4em
+		text-transform: uppercase
+		letter-spacing: 0.03em
+		color: $themeDark
+		&:hover, 
+		&:focus 
+			color: $accent
+
+.category-list 
+	&__item
+		margin-bottom: 1.1rem 
+	&__link 
+		@extend .recent-list__link
+		color: $accent
+		&:hover, 
+		&:focus 
+			color: $themeDark
+
+// Share this post
+
+.social-list
+	font: 
+		family: $defaultFont
+		style: italic
+		size: 2.2em
+	letter-spacing: 0.03em
+	+xs(font-size, 2em)
+	&__item
+		display: inline-block
+		&:first-child 
+			margin-right: 15px
+	&__link
+		padding: 0 15px
+		color: $themeGray
+		+xs(padding, 0 10px)
+		&:hover,
+		&:focus
+			color: $accent
+
+.divider 
+	width: 100%
+	height: 1px
+	margin-top: 18px
+	background-color: #e2e2e2
+
+// Post autor
+
+.post-autor
+	display: flex
+	padding-top: 3rem
+	+sm(flex-wrap, wrap)
+	&__img
+		max-width: 14rem
+		max-height: 14rem
+		min-width: 14rem
+		min-height: 14rem
+		margin-right: 3rem
+		& > img 
+			border-radius: 50%
+	&__body
+		+sm(margin-top, 1.5rem)
+	&__name 
+		font-size: 2rem
+		line-height: 1
+		color: $accent
+		&:hover, 
+		&:focus 
+			color: darken($accent, 10%)
+	&__position
+		margin-top: 1rem
+		margin-bottom: 3rem 
+		line-height: 1
+		color: $themeGray
+
+//Comments
+
+.box-comment
+	display: flex
+	+sm(flex-wrap, wrap)
+	&__img 
+		max-width: 8rem
+		max-height: 8rem
+		min-width: 8rem
+		min-height: 8rem
+		margin-right: 3rem
+		& > img 
+			border-radius: 50%
+	&__body
+		+sm(margin-top, 1.5rem)
+	&__author-reply 
+		margin-top: 2rem
+	&__heading-list
+		margin-bottom: 2rem
+		margin-left: -3rem
+		margin-right: -4rem
+	&__comment-list-reply
+		margin-top: 5rem
+
+.heading-list 
+	&__item 
+		display: inline-block
+		padding: 0 3rem
+		font-size: 1.6em
+		color: $themeGray
+	&__link
+		@extend .post-autor__name
+
+.author-reply
+	display: inline-block
+	font-size: 1.6rem
+	line-height: 1
+	color: $accent
+	&:hover, 
+	&:focus 
+		color: darken($accent, 10%)
+	&__icon 
+		margin-right: 12px
+		font-size: 1.8rem
+
+.comment-list-reply 
+	& > li 
+		padding-left: 7rem
+		+sm(padding-left, 2rem)
+
+.reply-author 
+	&__icon 
+		margin-right: 12px
+		font-size: 1.8rem
+
+// Latest blog posts
+
+.latest-posts 
+	+row-flex()
+	&__item
+		+col()
+		+size(6)
+		+size-sm(12)
+		margin-top: 3rem
+	&__img 
+		@extend .news-block__img
+		margin-bottom: 2rem
+	&__title
+		font: 
+			family: $titleFont
+			style: normal
+			weight: 600
+			size: 1.7em
+		text-transform: uppercase
+		line-height: 1.4
+	&__title-link
+		display: inline-block 
+		margin-bottom: 4px
+		color: $themeDark
+		&:hover,
+		&focus 
+			color: $accent
+	&__date
+		@extend .news-block__date
+		margin-top: 0
+		margin-bottom: 14px
+	&__link 
+		@extend .latest-posts__title
+		display: inline-block
+		margin-top: 1.6rem
+		font-size: 1.4em
+		line-height: 1
+		color: $accent
+		&:hover,
+		&focus 
+			color: darken($accent, 10%) 
+

@@ -1,0 +1,61 @@
+// Section discount
+	
+.s-discount 
+	position: relative
+	min-height: 54.8rem
+	padding: 9rem 0
+	background-color: $themeDark
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	+sm(padding, 4rem 0)
+	&::before 
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(#0c0c0c, 0.7)
+
+.discount 
+	position: relative
+	+row-flex()
+	justify-content: center
+	&__img-wrap
+		+col()
+		+size(4)
+		+size-md(12)
+		+md(text-align, center)
+	&__img-border
+		display: inline-block 
+		padding: 7px
+		border: 1px solid rgba($accent, 0.3)
+		border-radius: 50%
+	&__img 
+		display: block
+		border-radius: 50%
+	&__content 
+		+col()
+		margin-top: 7.5rem
+		+md(margin-top, 4rem)
+		+sm(margin-top, 2rem)
+		+size-md(12)
+	&__title
+		margin-bottom: 2.4rem 
+		font-family: $titleFont
+		font-size: 4.8em
+		font-weight: bold
+		line-height: 1.08
+		text-transform: uppercase
+		color: #ffffff
+		+xs(font-size, 4.4em)
+	&__title-top
+		display: block 
+		margin-bottom: 3.6rem
+		font-family: $defaultFont
+		font-size: 2.4rem
+		font-weight: normal
+		font-style: italic
+		text-transform: none
+		color: $accent

@@ -1,0 +1,50 @@
+.s-services 
+	padding: 8rem 0
+	+sm(padding, 4rem 0)
+	&__bg 
+		position: relative
+		min-height: 31rem
+		background-repeat: no-repeat 
+		background-size: cover 
+		background-position: center 
+		&::before 
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			background-color: rgba(#101010, 0.7)
+	&__text 
+		padding-top: 8.5rem
+
+.services-wrap 
+	position: relative
+	margin-top: -6.2rem
+	+xs(margin-top, 0)
+
+.services-block 
+	+u-row-flex(6px)
+	justify-content: center
+	&__item 
+		+u-col(6px)
+		+u-size(6, 12, 6px)
+		+size-sm(12)
+		min-height: 25.4rem
+		margin-bottom: 6px
+		padding: 4rem 5rem 
+		box-shadow: 0 5px 26px 0 rgba(0, 0, 0, 0.1)
+		background-color: #ffffff
+	&__icon 
+		margin-bottom: 2rem
+		font-size: 5em
+		line-height: 1
+		color: $accent
+		+xs(font-size, 4em)
+	&__link 
+		color: $themeDark
+		&:hover, 
+		&:focus	 
+			color: $accent
+	&__text 
+		margin-top: 6px

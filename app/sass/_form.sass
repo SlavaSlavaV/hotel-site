@@ -1,0 +1,99 @@
+/* Form */
+
+*::-webkit-input-placeholder
+	color: $themeGray 
+	font: 
+		family: $defaultFont
+		weight: normal
+		size: 1.4rem
+
+/* Firefox 18- */	
+	
+*:-moz-placeholder
+	color: $themeGray 
+	font: 
+		family: $defaultFont
+		weight: normal
+		size: 1.4rem
+
+	/* Firefox 19+ */
+
+*::-moz-placeholder
+	color: $themeGray 
+	font: 
+		family: $defaultFont
+		weight: normal
+		size: 1.4rem
+
+*:-ms-input-placeholder
+	color: $themeGray
+	font: 
+		family: $defaultFont
+		weight: normal
+		size: 1.4rem
+
+input, 
+textarea 
+	font: 
+		family: $defaultFont
+		style: normal
+		weight: normal 
+		size: 1.4em
+	background-color: #fff
+	border: 1px solid #e2e2e2
+	outline: none
+
+span.error
+	position: absolute
+	top: 100%
+	left: 0 
+	font: 
+		family: $defaultFont
+		style: italic
+		weight: normal 
+		size: 1.2rem
+	color: #f11111
+
+input.error,
+textarea.error 
+	border-color: #f11111
+	box-shadow: 0 0 3px 1px #f11111
+
+input:focus,
+textarea:focus
+	border-color: $accent
+
+.form-notific
+	margin-top: 3rem
+	font: 
+		family: $defaultFont
+		style: normal
+		weight: normal
+		size: 1.4em
+	line-height: 1
+
+.form
+	width: 100%
+	&-group
+		position: relative  
+		margin-top: 2rem
+	&__input 
+		min-width: 100%
+		padding: 11px 15px
+	&__textarea
+		@extend .form__input
+		min-height: 20rem
+		max-height: 40rem
+		line-height: 1.2
+		resize: vertical
+	&__button
+		min-width: 100%
+		margin-top: 3rem 
+		font-weight: 600
+		font-size: 1.2rem
+		line-height: 40px
+		border: none
+		&:hover,
+		&:focus 
+			background-color: lighten($accent, 20%)
+		

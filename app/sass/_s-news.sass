@@ -1,0 +1,48 @@
+.s-news 
+	padding-top: 8rem
+	+sm(padding-top, 4rem)
+
+.news-block 
+	+row-flex()
+	justify-content: center
+	margin-top: 2.8rem
+	&__item 
+		+col()
+		+size(4)
+		+size-sm(12)
+		margin-bottom: 3.5rem
+		&:last-child 
+			+sm(margin-bottom, 0)
+	&__img
+		display: block 
+		margin-bottom: 1rem
+		&:hover,
+		&:focus
+			filter: blur(3px)
+	&__title-link	
+		display: inline-block
+		color: $themeDark
+		&:hover,
+		&:focus 
+			color: $accent
+	&__date
+		display: inline-block
+		margin-top: 2.3rem
+		margin-bottom: 1.2rem 
+		font-family: $titleFont
+		font-size: 1.2em
+		font-weight: bold
+		line-height: 1
+		color: #999999
+	&__link 
+		display: inline-block
+		margin-top: 1.8rem
+		font-family: $titleFont
+		font-size: 1.7em
+		font-weight: bold
+		line-height: 1
+		text-transform: uppercase
+		color: $accent
+		&:hover, 
+		&:focus 
+			color: lighten($accent, 20%)

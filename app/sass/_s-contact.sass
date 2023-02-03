@@ -1,0 +1,89 @@
+//Section contact
+	
+.s-contact 
+	padding-top: 9rem
+	padding-bottom: 9rem
+	+sm(padding-top, 4rem)
+	+sm(padding-bottom, 5rem)
+
+.contact 
+	+row-flex()
+	+md(flex-direction, column-reverse)
+	&__info 
+		+col()
+		+size(6)
+		+size-md(12)
+	&__map 
+		@extend .contact__info
+		margin-top: 3.5rem
+		&_bottom 
+			margin-top: 7rem
+			+md(margin-top, 4rem)
+			border: 1px solid #e2e2e2
+	&__block
+		@extend .contact__info
+		&:first-child
+			+md(margin-top, 6rem)
+			+sm(margin-top, 4rem)
+	&__message
+		margin-top: 5rem
+		margin-bottom: 7.8rem
+		+md(margin-top, 2.5rem)
+		+md(margin-bottom, 4rem)
+		font-family: $titleFont
+		font-size: 1.6rem
+		font-weight: normal
+		line-height: 1.5
+		color: #999 
+				
+.info 
+	&__block
+		+row-flex()
+		margin-top: 5rem
+		+md(margin-top, 2.5rem)
+	&__title
+		margin-bottom: 1rem
+	&__text
+		font-family: $titleFont
+		font-size: 1.6rem
+		font-weight: normal
+		line-height: 1.8
+		color: #999 
+	&__loc 
+		+col()
+		+size(6)
+		+size-xs(12)
+	&__contact 
+		@extend .info__loc
+		+xs(margin-top, 1.5rem)
+	&__schedule 
+		@extend .info__loc
+		text-transform: uppercase
+		margin-top: 6.2rem
+		+md(margin-top, 1.5rem)
+	&__social 
+		@extend .info__loc
+		margin-top: 6.2rem
+		+md(margin-top, 1.5rem)
+	&__phone
+		color: #999
+		&:hover, 
+		&:focus 
+			color: $accent
+	&__mail 
+		@extend .info__phone
+
+.social 
+	&__item 
+		display: inline-block
+		margin-right: 3px
+	&__link 
+		@extend .info__phone
+		display: inline-block
+		width: 5rem
+		height: 5rem
+		background-color: #efefef 
+		line-height: 5rem
+		text-align: center
+		font-size: 2.5rem
+		 

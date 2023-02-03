@@ -1,0 +1,41 @@
+// Section Description
+	
+.s-description
+	padding-top: 8rem
+	padding-bottom: 8rem
+	+sm(padding-top, 6rem)
+	+sm(padding-bottom, 4rem)
+
+.description
+	+row-flex()
+	&__img-block 
+		+col()
+		+size(5)
+		+size-sm(12)
+	&__text-block 
+		+col()
+		+size(7)
+		+size-sm(12)
+		+sm(margin-top, 3rem)
+	&__h2-bottom
+		display: block
+		margin-top: 1.6rem
+		font-family: $defaultFont
+		font-weight: normal
+		font-size: 1.6rem
+		font-style: italic
+		color: $themeDark
+		+xs(font-size, 1.4rem)
+		+xs(margin-top, 0.5rem)
+	&__subtitle 
+		margin-top: 4.8rem
+		margin-bottom: 1.8rem
+		+xs(margin-top, 2.5rem)
+	&__subtext
+		margin-top: 1.8rem
+		margin-bottom: 4rem
+		+xs(margin-top, 1rem)
+		+xs(margin-bottom, 2rem)
+	&__button
+		margin-top: 4rem
+		+xs(margin-top, 3rem)

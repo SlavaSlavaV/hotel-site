@@ -1,0 +1,8 @@
+{
+	"editor.tabSize": 2,
+	"editor.fontSize": 18,
+	"editor.fontLigatures": true,
+	"files.autoSave": "onFocusChange",
+	"editor.wordWrap": "on",
+	"editor.insertSpaces": false,
+}

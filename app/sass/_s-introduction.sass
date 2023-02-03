@@ -1,0 +1,53 @@
+/* Section introduction */
+
+.s-introduction
+	padding: 8rem 0
+	+sm(padding, 4rem 0)
+
+.text-block 
+	max-width: 95rem
+	margin: 0 auto
+	text-align: center
+	opacity: 0.99
+	&__subtitle
+		margin-top: 1.5rem
+		margin-bottom: 1.5rem
+h2 > span 
+	color: $accent
+
+.services 
+	+row-flex()
+	margin-top: 2.2rem
+	margin-bottom: 1rem
+	+md(margin-bottom, 0)
+	&__item
+		+col()
+		+size(3)
+		+size-md(6)
+		+size-sm(12)
+		padding: 5rem 1rem
+		border: 3px solid rgba(0, 0, 0, 0)
+		text-align: center
+		+md(padding, 2.5rem)
+		+sm(padding, 1.5rem)
+		+trs(0.3s)
+		&:hover,
+		&:focus 
+			border-color: $accent
+		& > i 
+			font-size: 4.8em
+			color: $accent
+	&__link 
+		display: block
+		padding-top: 23px
+		padding-bottom: 10px
+		letter-spacing: 0.03em
+		color: #222222
+		&:hover,
+		&:focus
+			color: $accent
+	&__text
+		font: 
+			size: 1.7em
+		color: #6a6a6a
+

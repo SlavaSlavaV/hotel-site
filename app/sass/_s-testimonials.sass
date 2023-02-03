@@ -1,0 +1,62 @@
+// Section testimonials
+	
+.s-testimonials 
+	padding: 8rem 0
+	+sm(padding, 4rem 0)
+
+.testimonials-slider
+	position: relative
+	margin-top: 30px
+	& > .prev,
+	& > .next
+		position: absolute
+		top: 50%
+		z-index: 3
+		display: inline-block
+		width: 5rem
+		height: 5rem
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: auto 2rem
+		opacity: 0.65
+		cursor: pointer
+		+trf-t(0, -50%)
+		+trs(0.3s)
+		+md(top, 15%)
+		+md(transform, translate(0, 0))
+		&:hover, 
+		&:focus 
+			opacity: 1
+	& > .prev 
+		background-image: url(../img/svg/small-angle-prev.svg)
+		left: 7%
+		+xs(left, 2%)
+	& > .next 
+		background-image: url(../img/svg/small-angle-next.svg)
+		right: 7%
+		+xs(right, 2%)
+
+.testimonials-slide 
+	text-align: center
+	&__img 
+		margin: 0 auto
+		border-radius: 50%
+	&__text 
+		max-width: 68rem
+		margin: 3.3rem auto 4rem auto
+		font-size: 1.6em 
+	&__author 
+		font: 
+			family: $titleFont
+			weight: bold 
+			size: 1.8em 
+		line-height: 1
+		text-transform: uppercase
+		letter-spacing: 0.05em
+		color: $accent
+	&__position 
+		margin-top: 1.3rem
+		font: 
+			family: $titleFont
+			size: 1.6em
+		line-height: 1

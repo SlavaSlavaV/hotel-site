@@ -1,0 +1,55 @@
+.s-facts 
+	position: relative
+	min-height: 20rem
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	&::before 
+		content: "" 
+		position: absolute 
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background-color: rgba(#101010, 0.7)
+
+.facts-wrap 
+	+row-flex()
+	justify-content: center
+	padding: 7.3rem 0
+	opacity: 0.99
+	+sm(padding, 4rem 0 0 0)
+	+xs(padding, 4rem 0 1rem 0)
+
+.facts-block 
+	+col()
+	+size(3)
+	+size-sm(12)
+	+sm(margin-bottom, 4rem)
+	+sm(text-align, center)
+	+xs(margin-bottom, 3rem)
+	font-family: $titleFont
+	line-height: 1
+	color: #ffffff
+	&__count 
+		font-size: 5.2em
+		font-weight: 600
+		+xs(font-size, 3.8em)
+	&__text 
+		display: inline-block
+		margin-left: 1.5rem
+		font-size: 2em
+		font-weight: bold 
+		text-transform: uppercase
+		+md(display, block)
+		+md(margin-left, 0)
+		+md(margin-top, 1.5rem)
+		+xs(font-size, 1.6em)
+		+xs(line-height, 1.2)
+		+xs(margin-top, 1rem)
+
+@supports (align-content: center)
+	.facts-wrap
+		min-height: 20rem
+		align-content: center
+		padding: 0
