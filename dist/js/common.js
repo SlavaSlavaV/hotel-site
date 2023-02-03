@@ -16,6 +16,7 @@ $(document).ready(function () {
 		event.preventDefault();
 		if (event.target.closest('.menu-toggle')) {
 			$(this).toggleClass('menu-open');
+			$(this).css('z-index', 1000)
 			$('.top-menu').toggleClass('open-list');
 		}
 		else if (event.target.closest('.top-menu__link')) {
