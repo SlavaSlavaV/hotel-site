@@ -2550,7 +2550,7 @@ textarea:focus {
     position: fixed;
   }
   .top-menu {
-    z-index: 15;
+    z-index: 1000;
   }
   .top-menu {
     display: -webkit-box;
